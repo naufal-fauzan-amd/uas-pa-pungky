@@ -35,6 +35,36 @@ int main(){
 
         
     }cout<<endl;
-    
-    
+
+    cout<<"--------------------------------------"<<endl;
+    cout<<"#####------ Struck Mini Market ILKOOM ------####"<<endl;
+    cout<<"---------------------------------------"<<endl;
+    cout<<" No Barang Jumlah Harga Satuan Sub Total"<<endl;
+    for (int i = 0; i<jumlahTotalBarang; i++){
+        cout<<setw<<(1)<<1+1<<" ";
+
+        cout<<left<<setw(12)<<namaBarang[i];
+
+        cout<<right<<setw(15)<<jumlahBarang[i];
+        cout<<setw(18)<<hargabarang[i];
+        cout<<setw(15)<<jumlahHarga[i]*hargaBarang[i];
+        cout<<endl;
+        totalHarga=totalHarga+ (jumlahBarang[i]*hargaBarang[i]);
+    }
+    cout<<"---------------------------------------"<<endl;
+    cout<<"Total Harga : Rp."<<totalHarga<<endl<<endl;
+    cout<<"Jumlah Bayar :Rp.";
+    cin>>jumlahBayar:cout<<endl
+
+    while(jumlahBayar-totalHarga<0){
+        cout<<"Maaf, Uang Anda Kurang. Mohon lakukan ulang pembayaran"<<endl;
+        cout<<"Jumlah Bayar :Rp. ";
+        cin>>jumlahBayar; cout<<endl;
+    }
+    cout<<"Kembalian :Rp. "<<jumlahBayar-totalHarga<<endl<<endl;
+    cout<<"----------------------------------------------------------";
+    cout<<"###-----  Terimakasih sudah berbelanja. Datang Kembali ----###";
+    cout<<"-------------------------------------------------------"<<endl;
+
+    return 0;   
 }
